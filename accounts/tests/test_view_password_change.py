@@ -10,7 +10,7 @@ class PasswordChangeTests(TestCase):
     def setUp(self):
         username = 'deepthi'
         password = 'deepu8096'
-        user = User.objects.create_user(username=username, email='deepthi@badam.com', password=password)
+        user = User.objects.create_user(username=username, email='badam.sdeepthi@gmail.com', password=password)
         url = reverse('password_change')
         self.client.login(username=username, password=password)
         self.response = self.client.get(url)
@@ -51,9 +51,9 @@ class PasswordChangeTestCase(TestCase):
     accepts a `data` dict to POST to the view.
     '''
     def setUp(self, data={}):
-        self.user = User.objects.create_user(username='john', email='john@doe.com', password='old_password')
+        self.user = User.objects.create_user(username='deepthi', email='badam.sdeepthi@gmail.com', password='old_password')
         self.url = reverse('password_change')
-        self.client.login(username='john', password='old_password')
+        self.client.login(username='Deepu8096', password='old_password')
         self.response = self.client.post(self.url, data)
 
 
